@@ -1,10 +1,10 @@
-/**app.wxss**/
-.container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
-  box-sizing: border-box;
-} 
+page { background:#F7F8F4; color:#17372A; font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif; }
+button::after { border:none; }
+.page { min-height:100vh; box-sizing:border-box; padding:30rpx; }
+.card { background:#fff; border-radius:26rpx; box-shadow:0 8rpx 24rpx rgba(29,70,48,.055); }
+.eyebrow { color:#759381; font-size:20rpx; letter-spacing:2.5rpx; font-weight:600; }
+.serif { font-family:Georgia,"Times New Roman",serif; }
+.risk { color:#8B968F; font-size:21rpx; line-height:1.65; text-align:center; padding:20rpx 20rpx 8rpx; }
+.primary-btn { height:96rpx; line-height:96rpx; color:#fff; background:linear-gradient(110deg,#154B35,#287052); border-radius:18rpx; font-size:30rpx; font-weight:600; box-shadow:0 10rpx 20rpx rgba(23,88,62,.18); }
+.section-title { font-size:32rpx; font-weight:700; }
+.section-sub { display:block; margin-top:6rpx; font-size:22rpx; color:#849188; }

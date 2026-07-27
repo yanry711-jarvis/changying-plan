@@ -1,0 +1,5 @@
+<view class="page share">
+  <canvas class="export-canvas" canvas-id="posterCanvas" width="750" height="1334"></canvas>
+  <view class="poster"><view class="poster-brand">◖ 长盈计划<text>长期分红 · 穿越周期</text></view><view class="poster-title">{{name}}</view><view class="poster-sub">给未来的自己，一份从容的底气</view><view class="poster-num"><text>¥</text><b class="serif">{{monthly}}</b><em>/ 月</em></view><view class="poster-caption">预计第 {{years}} 年月均分红</view><view class="poster-chart"><view class="dot d1"></view><view class="dot d2"></view><view class="dot d3"></view><view class="dot d4"></view><view class="dot d5"></view></view><view class="poster-foot"><text>坚持长期分红投资<br/>让时间成为你的伙伴</text><view class="qr">▦</view></view></view>
+  <view class="share-tools"><button bindtap="save">▧　生成长图</button><button bindtap="save">⇩　保存图片</button></view><button open-type="share" class="primary-btn">↗　分享给朋友</button><view class="risk">仅分享测算结果，不含持仓明细</view>
+</view>

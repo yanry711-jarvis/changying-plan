@@ -1,12 +1,16 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/planner/planner",
+    "pages/result/result",
+    "pages/plans/plans",
+    "pages/share/share"
   ],
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarBackgroundColor": "#ffffff"
+    "navigationBarTitleText": "长盈计划",
+    "navigationBarBackgroundColor": "#F7F8F4",
+    "backgroundColor": "#F7F8F4"
   },
   "style": "v2",
   "componentFramework": "glass-easel",

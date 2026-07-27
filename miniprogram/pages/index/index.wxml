@@ -1,27 +1,9 @@
-<!--index.wxml-->
-<scroll-view class="scrollarea" scroll-y type="list">
-  <view class="container">
-    <view class="userinfo">
-      <block wx:if="{{canIUseNicknameComp && !hasUserInfo}}">
-        <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
-          <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
-        </button>
-        <view class="nickname-wrapper">
-          <text class="nickname-label">昵称</text>
-          <input type="nickname" class="nickname-input" placeholder="请输入昵称" bind:change="onInputChange" />
-        </view>
-      </block>
-      <block wx:elif="{{!hasUserInfo}}">
-        <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-        <view wx:else> 请使用2.10.4及以上版本基础库 </view>
-      </block>
-      <block wx:else>
-        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-      </block>
-    </view>
-    <view class="usermotto">
-      <text class="user-motto">{{motto}}</text>
-    </view>
-  </view>
-</scroll-view>
+<view class="page home">
+  <view class="top"><view class="brand"><view class="mark">Y</view><text>长盈计划</text></view><view class="plan-link" bindtap="openPlans">我的计划</view></view>
+  <view class="eyebrow">LONG-TERM INCOME PLANNER</view>
+  <view class="hero">把今天的投入，<br/>变成未来的<text>现金流</text></view>
+  <view class="income-card"><view class="income-head"><text>预计 {{summary.years}} 年后月均分红</text><text>↗</text></view><view><text class="yuan">¥</text><text class="income-num serif">{{summary.monthlyDividend}}</text></view><view class="spark"><view class="line a"></view><view class="line b"></view><view class="line c"></view><view class="line d"></view><view class="line e"></view></view><button class="start" bindtap="startPlan">开始测算　›</button></view>
+  <view class="goal-row"><view class="goal-card" data-goal="retirement" bindtap="startPlan"><view class="goal-icon">⌂</view><text>退休计划</text><text class="arrow">›</text><view class="hill"></view></view><view class="goal-card edu" data-goal="education" bindtap="startPlan"><view class="goal-icon">⌑</view><text>子女教育金</text><text class="arrow">›</text><view class="books">▰▰▰</view></view></view>
+  <view wx:if="{{plans.length}}" class="saved"><view class="saved-head"><text class="section-title">最近方案</text><text bindtap="openPlans">全部 ›</text></view><block wx:for="{{plans}}" wx:key="id"><view class="saved-item"><text>{{item.name}}</text><text>¥{{item.monthlyDividend}} / 月</text></view></block></view>
+  <view class="risk">投资有风险，过往业绩不代表未来表现。本工具仅用于长期规划测算，不构成投资建议。</view>
+</view>

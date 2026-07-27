@@ -1,0 +1,10 @@
+<view class="page result" wx:if="{{result}}">
+  <view class="hero-card"><text>{{summary.years}} 年后，你可能每月收到</text><view><text class="yen">¥</text><text class="hero-num serif">{{summary.monthly}}</text></view><view class="annual">年度分红　¥{{summary.annual}}</view></view>
+  <view wx:if="{{summary.recommended}}" class="recommend"><text>为达到目标月分红，建议每月定投</text><text class="serif">¥{{summary.recommended}}</text></view>
+  <view class="goal-ok"><view>✓</view><text>第 {{summary.years}} 年月均分红 ¥{{summary.monthly}}</text><text>›</text></view>
+  <view class="stat-row"><view class="card stat"><text>预计期末资产</text><b class="serif">¥{{summary.value}}</b></view><view class="card stat"><text>累计投入</text><b class="serif">¥{{summary.invested}}</b></view></view>
+  <view class="card chart-card"><view><text class="section-title">资产增长趋势</text><text class="section-sub">预计市值与累计投入</text></view><canvas class="chart" canvas-id="asset" style="width:680rpx;height:220rpx"/></view>
+  <view class="card chart-card"><view><text class="section-title">年度分红现金流</text><text class="section-sub">第 {{summary.years}} 年年度分红 ¥{{summary.annual}}</text></view><canvas class="chart" canvas-id="dividend" style="width:680rpx;height:220rpx"/></view>
+  <view class="detail-title"><text class="section-title">年度明细</text><text>单位：元</text></view><view class="table card"><view class="row header"><text>年份</text><text>累计投入</text><text>预计市值</text><text>年度分红</text></view><block wx:for="{{table}}" wx:key="year"><view class="row"><text>{{item.year}} 年</text><text>{{item.invested}}</text><text class="green">{{item.value}}</text><text class="gold">{{item.dividend}}</text></view></block></view>
+  <view class="actions"><button class="ghost" bindtap="adjust">调整方案</button><button class="primary-btn action" bindtap="savePlan">保存方案</button></view><button class="share-btn" bindtap="share">分享我的计划　↗</button><view class="risk">结果为税前假设测算，不构成投资建议。实际股价和分红会随市场与公司经营情况波动。</view>
+</view>

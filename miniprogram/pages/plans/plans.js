@@ -1,0 +1,1 @@
+Page({ data:{plans:[]}, onShow(){this.setData({plans:wx.getStorageSync('changyingPlans')||[]})}, remove(e){const id=e.currentTarget.dataset.id;const plans=this.data.plans.filter(x=>x.id!==id);wx.setStorageSync('changyingPlans',plans);this.setData({plans})}, start(){wx.navigateTo({url:'../planner/planner'})} })
