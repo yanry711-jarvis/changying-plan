@@ -1,0 +1,22 @@
+# Local dependencies and build output
+node_modules/
+tmp-sheet/
+miniprogram/node_modules/
+miniprogram/miniprogram_npm/
+
+# WeChat DevTools local-only configuration
+miniprogram/project.private.config.json
+
+# Generated previews and diagnostics; keep the import template only
+outputs/**
+!outputs/sample_bank_data/
+outputs/sample_bank_data/*
+!outputs/sample_bank_data/银行股测算_模拟导入数据.xlsx
+
+# Local system files and secrets
+.DS_Store
+Thumbs.db
+.env
+.env.*
+*.pem
+*.key
